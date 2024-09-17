@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Hangman.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Grid
+        RowDefinitions=".60*,.4*">
+        <VerticalStackLayout>
+            <Label
+                Text="{Binding GameStatus}"
+                HorizontalOptions="Center"
+                FontAttributes="Bold" />
+
+            <Image
+                x:Name="currentImage"
+                HeightRequest="250"
+                Source="{Binding CurrentImage}" />
+            <Image
+                x:Name="winImage"
+                IsVisible="False"
+                Source="winimagen.png" />
+
+            <Label
+                Text="{Binding Spotlight}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontFamily="HARRYP__.TTF"
+                FontSize="25" />
+            <Label
+                Text="{Binding Message}"
+                FontSize="Large"
+                HorizontalTextAlignment="Center" />
+
+            <Button
+                Text="Reset"
+                HorizontalOptions="Center"
+                Clicked="ResetGame_Clicked"
+                WidthRequest="100" />
+        </VerticalStackLayout>
+        <FlexLayout
+            x:Name="LettersContainer"
+            Grid.Row="1"
+            BindableLayout.ItemsSource="{Binding Letters}"
+            JustifyContent="SpaceEvenly"
+            Wrap="Wrap">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <Button
+                        Text="{Binding .}"
+                        Clicked="Button_Clicked"
+                        FontFamily="HarryPotter"
+                        HeightRequest="50"
+                        WidthRequest="50" />
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </FlexLayout>
+
+    </Grid>
+
+
+
+</ContentPage>

@@ -1,0 +1,35 @@
+<?<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Hangman.HechizosPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Hechizos">
+
+    <StackLayout Padding="20">
+        <Label
+            Text="Lista de Hechizos"
+            FontSize="24"
+            HorizontalOptions="Center" />
+
+        <!-- Lista de hechizos -->
+        <ListView x:Name="SpellListView">
+            <ListView.ItemsSource>
+                <!-- Agrega hechizos aquí -->
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Accio</x:String>
+                    <x:String>Expecto Patronum</x:String>
+                    <x:String>Wingardium Leviosa</x:String>
+                    <x:String>Expelliarmus</x:String>
+                    <x:String>Lumos</x:String>
+                    <!-- Añade más hechizos según sea necesario -->
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
+
+        <!-- Botón para volver a la HarryPotterGame -->
+        <Button
+            Text="Volver a Menú Principal"
+            Clicked="GoToMainMenu"
+            Margin="0,20,0,0" />
+    </StackLayout>
+</ContentPage>

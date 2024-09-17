@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Hangman.HarryPotterGame"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="HarryPotterGame">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height=".1*" />
+            <RowDefinition
+                Height=".8*" />
+            <RowDefinition
+                Height=".1*" />
+        </Grid.RowDefinitions>
+
+        <Frame
+            Grid.Row="0"
+            BackgroundColor="#C8472C"
+            BorderColor="Transparent" />
+        <Label
+            Grid.Row="0"
+            Text="Lista Temas"
+            TextColor="#FEFEFE"
+            FontAttributes="Bold"
+            FontFamily="onepiece_font.ttf"
+            FontSize="25"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center" />
+
+        <StackLayout
+            Grid.Row="1"
+            Margin="50"
+            HorizontalOptions="Center"
+            Spacing="30">
+            <Button
+                Text="Hechizos"
+                TextColor="#FEFEFE"
+                Margin="15,0"
+                BackgroundColor="#00ff75"
+                CornerRadius="10"
+                FontSize="20" 
+                Clicked="Hechizos_Clicked"/>
+            <Button
+                Text="Personajes"
+                TextColor="#FEFEFE"
+                Margin="15,0"
+                BackgroundColor="LightBlue"
+                CornerRadius="10"
+                FontSize="20" 
+                Clicked="Personajes_Clicked"/>
+            <Button
+                Text="Posiones"
+                TextColor="#FEFEFE"
+                Margin="15,0"
+                BackgroundColor="#8B00FF"
+                CornerRadius="10"
+                FontSize="20"
+                Clicked="Pociones_Clicked"/>
+            <Button
+                Text="Mundo Magico"
+                TextColor="#FEFEFE"
+                Margin="15,0"
+                BackgroundColor="#750000"
+                CornerRadius="10"
+                FontSize="20" 
+                Clicked="MundoMagico_Clicked"/>
+        </StackLayout>
+
+    </Grid>
+</ContentPage>
